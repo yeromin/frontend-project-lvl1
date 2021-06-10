@@ -7,6 +7,8 @@
 
 ![example workflow](https://github.com/yeromin/frontend-project-lvl1/actions/workflows/hxlt-github-actions.yml/badge.svg)
 
+# Asciinema
+1. [Task 1. Brain Even. Asciinema:](https://asciinema.org/a/419625)
 
 # The first Hexlet project
 
