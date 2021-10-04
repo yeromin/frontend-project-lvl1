@@ -1,5 +1,5 @@
-import startGameEngine from '../index.js';
-import generateRandomNumber from '../../modules/random-generator.js';
+import startGameEngine from '../modules/game-engine.js';
+import generateRandomNumber from '../modules/random-generator.js';
 
 const GAME_RULES_MESSAGE = 'What is the result of the expression?';
 const LIMIT_RANDOM_NUMBER = 10;

@@ -1,14 +1,18 @@
 import readlineSync from 'readline-sync';
-import userName from '../src/cli.js';
+import greeting from '../src/cli.js';
 
 const ATTEMPT_COUNTER = 3;
 
-const gameEngine = (GAME_RULES_MESSAGE, generateGameData) => {
+const startGameEngine = (GAME_RULES_MESSAGE, generateGameData) => {
+  const userName = greeting();
+
   console.log(`${GAME_RULES_MESSAGE}`);
 
   for (let i = 0; i < ATTEMPT_COUNTER; i += 1) {
     const [curTask, curSolution] = generateGameData();
+
     console.log(`Question: ${curTask}`);
+
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== curSolution) {
@@ -17,7 +21,8 @@ const gameEngine = (GAME_RULES_MESSAGE, generateGameData) => {
     }
     console.log('Correct!');
   }
+
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameEngine;
+export default startGameEngine;
